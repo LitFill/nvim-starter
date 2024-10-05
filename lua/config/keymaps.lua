@@ -31,3 +31,6 @@ set("n", "<leader>rw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {
 set("n", "-", "<cmd>Oil<CR>", { desc = "Open parent dir" })
 
 set("n", "<leader>utr", "<cmd>TransparentToggle<CR>", { desc = "Toggle transparent background" })
+
+set("t", "<C-q>", "<C-\\><C-n>", { nowait = true })
+set("n", "<leader>ot", "<cmd>term<CR>", { desc = "(o)pen (t)erminal" })
