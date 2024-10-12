@@ -5,8 +5,8 @@
 local set = vim.keymap.set
 
 set({ "i", "t" }, "jk", "<Esc>", { nowait = true, desc = "exit to normal" })
-set("n", "<leader>mr", "<cmd>term make run", { desc = "(m)ake (r)un" })
-set("n", "<leader>mb", "<cmd>term make build", { desc = "(m)ake (b)uild" })
+set("n", "<leader>mr", "<cmd>term make run<CR>", { desc = "(m)ake (r)un" })
+set("n", "<leader>mb", "<cmd>term make build<CR>", { desc = "(m)ake (b)uild" })
 
 set("n", "<leader>pv", vim.cmd.Ex, { desc = "preview pwd" })
 
@@ -21,8 +21,8 @@ set("n", "N", "Nzz")
 
 set({ "n", "v" }, "<leader>d", [["_d]])
 
--- set("n", "<C-k>", "<cmd>cnext<CR>zz")
--- set("n", "<C-j>", "<cmd>cprev<CR>zz")
+-- set("n", "<C-k>"    , "<cmd>cnext<CR>zz")
+-- set("n", "<C-j>"    , "<cmd>cprev<CR>zz")
 -- set("n", "<leader>k", "<cmd>lnext<CR>zz")
 -- set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
@@ -33,4 +33,4 @@ set("n", "-", "<cmd>Oil<CR>", { desc = "Open parent dir" })
 set("n", "<leader>utr", "<cmd>TransparentToggle<CR>", { desc = "Toggle transparent background" })
 
 set("t", "<C-q>", "<C-\\><C-n>", { nowait = true })
-set("n", "<leader>ot", "<cmd>term<CR>", { desc = "(o)pen (t)erminal" })
+set("n", "<leader>ot", "<cmd>term<CR>a", { desc = "(o)pen (t)erminal" })
