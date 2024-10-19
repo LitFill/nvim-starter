@@ -8,8 +8,10 @@ local set = vim.keymap.set
 set({ "i", "t" }, "jk", "<Esc>", { nowait = true, desc = "exit to normal" })
 set("n", "<leader>qw", "<cmd>wq<CR>", { desc = "save and quit" })
 
+-- using makefile
 set("n", "<leader>mr", "<cmd>term make run<CR>", { desc = "(m)ake (r)un" })
 set("n", "<leader>mb", "<cmd>term make build<CR>", { desc = "(m)ake (b)uild" })
+set("n", "<leader>mqb", "<cmd>term make build<CR>a<CR>", { desc = "quick build" })
 
 set("n", "<leader>pv", vim.cmd.Ex, { desc = "preview pwd" })
 
@@ -40,3 +42,6 @@ set("n", "<leader>ot", "<cmd>term<CR>a", { desc = "(o)pen (t)erminal" })
 
 -- NeoGit
 set("n", "<leader>gn", "<cmd>Neogit<CR>", { desc = "open NeoGit" })
+
+-- Typst Preview
+set("n", "<leader>tp", "<cmd>TypstPreviewToggle<CR>", { desc = "Toggle Typst Preview in browser" })
