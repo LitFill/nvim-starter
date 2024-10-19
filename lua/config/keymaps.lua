@@ -4,7 +4,10 @@
 
 local set = vim.keymap.set
 
+-- convenient
 set({ "i", "t" }, "jk", "<Esc>", { nowait = true, desc = "exit to normal" })
+set("n", "<leader>qw", "<cmd>wq<CR>", { desc = "save and quit" })
+
 set("n", "<leader>mr", "<cmd>term make run<CR>", { desc = "(m)ake (r)un" })
 set("n", "<leader>mb", "<cmd>term make build<CR>", { desc = "(m)ake (b)uild" })
 
