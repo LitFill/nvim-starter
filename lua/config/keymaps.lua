@@ -34,3 +34,6 @@ set("n", "<leader>utr", "<cmd>TransparentToggle<CR>", { desc = "Toggle transpare
 
 set("t", "<C-q>", "<C-\\><C-n>", { nowait = true })
 set("n", "<leader>ot", "<cmd>term<CR>a", { desc = "(o)pen (t)erminal" })
+
+-- NeoGit
+set("n", "<leader>gn", "<cmd>Neogit<CR>", { desc = "open NeoGit" })
