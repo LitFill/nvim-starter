@@ -31,7 +31,12 @@ set({ "n", "v" }, "<leader>d", [["_d]])
 -- set("n", "<leader>k", "<cmd>lnext<CR>zz")
 -- set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
-set("n", "<leader>rw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "(r)eplace (w)ord" })
+set(
+    "n",
+    "<leader>rw",
+    [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+    { desc = "(r)eplace (w)ord" }
+)
 
 set("n", "-", "<cmd>Oil<CR>", { desc = "Open parent dir" })
 
