@@ -10,7 +10,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 # instalasi
 
 ```sh 
-git clone https://github.com/LitFill/kickstart.git ~/.config/nvim
+git clone https://github.com/LitFill/nvim-starter.git ~/.config/nvim
 ```
 
 
