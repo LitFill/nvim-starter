@@ -3,4 +3,19 @@
 A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
 Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
 
-## modifikasi oleh @Litfill
+# modifikasi oleh @Litfill
+
+[LitFill](https://github.com/LitFill)
+
+# instalasi
+
+```sh 
+git clone https://github.com/LitFill/kickstart.git ~/.config/nvim
+```
+
+
+## requirement
+
+1. neovim
+1. git
+
