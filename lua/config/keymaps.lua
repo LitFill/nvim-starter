@@ -4,6 +4,15 @@
 
 local set = vim.keymap.set
 
+---add desc to opts for set
+---@param opts vim.keymap.set.Opts
+---@param desc string
+---@return vim.keymap.set.Opts
+local d = function(opts, desc)
+    opts.desc = desc
+    return opts
+end
+
 -- convenient
 set({ "i", "t" }, "jk", "<Esc>", { nowait = true, desc = "exit to normal" })
 set("n", "<leader>qw", "<cmd>wq<CR>", { desc = "save and quit" })
@@ -50,3 +59,16 @@ set("n", "<leader>gn", "<cmd>Neogit<CR>", { desc = "open NeoGit" })
 
 -- Typst Preview
 set("n", "<leader>tp", "<cmd>TypstPreviewToggle<CR>", { desc = "Toggle Typst Preview in browser" })
+
+-- Idris2 lsp
+local bufopts = { noremap = true }
+local cmd = [[:lua require("idris2.code_action")]]
+set("n", "<leader>iev", [[:lua require("idris2.repl").evaluate()<CR>]], d(bufopts, "evaluate"))
+set("n", "<leader>ics", cmd .. ".case_split()<CR>", d(bufopts, "case split"))
+set("n", "<leader>imc", cmd .. ".make_case()<CR>", d(bufopts, "make case"))
+set("n", "<leader>iml", cmd .. ".make_lemma()<CR>", d(bufopts, "make lemma"))
+set("n", "<leader>iac", cmd .. ".add_clause()<CR>", d(bufopts, "add clause"))
+set("n", "<leader>ies", cmd .. ".expr_search()<CR>", d(bufopts, "search expression"))
+set("n", "<leader>igd", cmd .. ".generate_def()<CR>", d(bufopts, "generate definition"))
+set("n", "<leader>irh", cmd .. ".refine_hole()<CR>", d(bufopts, "refine hole"))
+set("n", "<leader>iin", cmd .. ".intro()<CR>", d(bufopts, "intro"))
