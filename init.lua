@@ -120,11 +120,12 @@ require("flexoki").setup({
     },
 
     highlight_groups = {
-        -- Comment = { fg = "subtle" },
-        -- VertSplit = { fg = "muted", bg = "muted" },
+        Comment = { fg = "subtle", italic = true },
+        VertSplit = { fg = "muted", bg = "muted" },
     },
 
-    before_highlight = function(group, highlight, palette)
+    -- before_highlight = function(group, highlight, palette)
+    before_highlight = function(_, _, _)
         -- Disable all undercurls
         -- if highlight.undercurl then
         --     highlight.undercurl = false
@@ -138,3 +139,7 @@ require("flexoki").setup({
 })
 
 vim.cmd("colorscheme flexoki")
+
+require("diffview").setup({
+    git_cmd = "git -c diff.external=difft",
+})
